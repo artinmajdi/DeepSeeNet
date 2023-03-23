@@ -61,5 +61,4 @@ class DataGenerator(Sequence):
             _, label = row[0], row[1]
             labels.append(label)
         class_weight_list = class_weight.compute_class_weight('balanced', np.unique(labels), labels)
-        cw = dict(zip(np.unique(labels), class_weight_list))
-        return cw
+        return dict(zip(np.unique(labels), class_weight_list))

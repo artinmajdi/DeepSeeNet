@@ -4,10 +4,7 @@ import docopt
 
 
 def get_args(args):
-    s = ''
-    for k in args:
-        s += '    {}: {}\n'.format(k, args[k])
-    return s
+    return ''.join(f'    {k}: {args[k]}\n' for k in args)
 
 
 def parse_args(doc, **kwargs):

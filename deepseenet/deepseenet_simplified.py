@@ -16,16 +16,16 @@ def get_simplified_score(scores):
         a score of 0-5
     """
     def has_adv_amd(score):
-        return True if score == 1 else False
+        return score == 1
 
     def has_pigment(score):
-        return True if score == 1 else False
+        return score == 1
 
     def has_large_drusen(score):
-        return True if score == 2 else False
+        return score == 2
 
     def has_intermediate_drusen(score):
-        return True if score == 1 else False
+        return score == 1
 
     score = 0
     if has_adv_amd(scores['advanced_amd'][0]):
