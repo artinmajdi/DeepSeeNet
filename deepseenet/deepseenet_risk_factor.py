@@ -25,5 +25,4 @@ def RiskFactorModel(n_classes=2, input_shape=(224, 224, 3)):
     x = Dense(128, activation='relu', name='global_dense2')(x)
     x = Dropout(0.5)(x)
     predictions = Dense(n_classes, activation='softmax', name='global_predictions')(x)
-    final_model = Model(inputs=model.input, outputs=predictions)
-    return final_model
+    return Model(inputs=model.input, outputs=predictions)

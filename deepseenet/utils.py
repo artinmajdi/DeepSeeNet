@@ -12,7 +12,7 @@ def pick_device():
         DEVICE_ID = DEVICE_ID_LIST[0]  # grab first element from list
         # Set CUDA_VISIBLE_DEVICES to mask out all other GPUs than the first available device id
         os.environ["CUDA_VISIBLE_DEVICES"] = str(DEVICE_ID)
-        logging.debug('Device ID (unmasked): ' + str(DEVICE_ID))
+        logging.debug(f'Device ID (unmasked): {str(DEVICE_ID)}')
     except:
         logging.exception('Cannot detect GPUs')
 
